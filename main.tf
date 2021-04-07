@@ -13,7 +13,7 @@ resource "azurerm_resource_group" "rg" {
 
 resource "azurerm_management_lock" "Lock_rg" {
 count    = var.create_management_lock != false ? 1 : 0
-  name       = "Lock-${var.namerg}"
+  name       = "Lock-${var.resource_group_name}"
   scope      = azurerm_resource_group.rg.id
   lock_level = "CanNotDelete"
   notes      = "This Resource Group can't be Deleted"
