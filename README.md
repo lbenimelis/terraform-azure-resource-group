@@ -6,7 +6,7 @@ Example:
 
 module "resource-group" {
   source  = "lbenimelis/resource-group/azure"
-  version = "0.0.3"
+  version = "1.0.0"
   create_management_lock = true
   resource_group_name = "test-rg"
   location = "francecentral"
